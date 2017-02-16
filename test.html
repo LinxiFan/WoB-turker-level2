@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>{% block title %}Default title{% end %}</title>
+  </head>
+  <body>
+    <ul>
+      {% for student in students %}
+        {% block student %}
+          <li>{{ escape(student.name) }}</li>
+        {% end %}
+      {% end %}
+    </ul>
+  </body>
+</html>
