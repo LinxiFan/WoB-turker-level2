@@ -28,49 +28,5 @@
 	// Call this main function after passing from Tornado
 	parseTemplate();
     </script>
-    
-    <form name="ArgTable0" onsubmit="submitForm(); return false;">
-    <table>
-    <tr>
-    {% for blank_name in blank_names %}
-        <td><b>{{ escape(blank_name) }}</b></td>
-    {% end %}
-    </tr>
-
-    {% for r in range(10) %}
-    <tr>
-		{% for c in range(len(blank_names)) %}
-		  <td>
-		  <input type="text" name="input-{{ r }}-{{ c }}" style="width:250px" 
-		   onclick="previewTable()" oninput="previewTable()">
-		  </td>
-		{% end %}
-    </tr>
-    {% end %}
-    
-    </table>
-    <div class="example"><br>
-    A live preview will appear below as you fill out the table. 
-    The values you've entered will be preserved, so feel free to change the question template 
-    if you need to.<br>Please <b>carefully verify</b> the completed questions before you click "submit". 
-    You will receive a confirmation code after submission.</div>
-    </form>
-    
-    <form name="TurkerInput" onsubmit="parse(); return false;">
-        <div>
-            <label for="website">Website:</label>
-            <label>yelp.com</label>
-        </div>
-        <div>
-            <label for="question">Question template:</label>
-            <label>What is the good</label>
-        </div>
-
-        <!--
-        <div class="button">
-            <button type="submit">Generate table</button>
-        </div>
-        -->
-    </form>
   </body>
 </html>
