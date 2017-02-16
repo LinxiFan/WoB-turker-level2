@@ -14,14 +14,22 @@
     <link rel="stylesheet" type="text/css" href="vendor/sweetalert/sweetalert.css">
   </head>
   <body>
-      <h1>Create Web Questions</h1>
+    <script src="main.js"></script>
+    <h1>Create Web Questions</h1>
 
     <p>For more detailed instructions, please see <a href="instructions.html" target="_blank">here</a>. </p>
     
     <p> Website: {{ linkify(website, extra_params='target="_blank"') }}</p>
     <p> Question template: <b><i>{{ question_template }}</i></b> </p>
     
-    <form name="ArgTable" onsubmit="submitForm(); return false;">
+    <script>
+    <!-- pass values from Tornado to JS -->
+    passTornado("{{ escape(question_template) }}");
+	// Call this main function after passing from Tornado
+	parseTemplate();
+    </script>
+    
+    <form name="ArgTable0" onsubmit="submitForm(); return false;">
     <table>
     <tr>
     {% for blank_name in blank_names %}
@@ -33,18 +41,19 @@
     <tr>
 		{% for c in range(len(blank_names)) %}
 		  <td>
-		  <input type="text" name="input-{{ r }}-{{ c }}" style="width:250px">
+		  <input type="text" name="input-{{ r }}-{{ c }}" style="width:250px" 
+		   onclick="previewTable()" oninput="previewTable()">
 		  </td>
 		{% end %}
     </tr>
     {% end %}
     
     </table>
-    
-    <tr class="example">A live preview will appear below as you fill out the table. 
+    <div class="example"><br>
+    A live preview will appear below as you fill out the table. 
     The values you've entered will be preserved, so feel free to change the question template 
     if you need to.<br>Please <b>carefully verify</b> the completed questions before you click "submit". 
-    You will receive a confirmation code after submission.</tr>
+    You will receive a confirmation code after submission.</div>
     </form>
     
     <form name="TurkerInput" onsubmit="parse(); return false;">
@@ -63,6 +72,5 @@
         </div>
         -->
     </form>
-    <script src="main.js"></script>
   </body>
 </html>

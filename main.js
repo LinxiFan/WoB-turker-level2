@@ -36,6 +36,13 @@ function upload(url, question, data) {
 }
 
 /*
+ * Pass value from Tornado html
+ */
+function passTornado(question_template) {
+    originalQuestion = question_template;
+}
+
+/*
  * Better alert message
  */
 function swal_html(title, text, type) {
@@ -46,10 +53,6 @@ function swal_html(title, text, type) {
         html: true
     });
 }
-
-/* add instant key change to question template
- */
-document.TurkerInput.Question.oninput = parseTemplate;
 
 function removeTable() {
     if (ArgTableNode) {
@@ -70,10 +73,7 @@ function removePreview() {
 }
 
 function parseTemplate() {
-    removeTable();
-    removePreview();
-    checkWebsite();
-    var is_valid = getTemplates(document.TurkerInput.Question);
+    var is_valid = getTemplates();
     // console.log(templates);
     if (!is_valid) 
         return false;
@@ -82,35 +82,17 @@ function parseTemplate() {
     return true;
 }
 
-/*
- * We don't want yelp.com anymore
- */
-function checkWebsite() {
-    var website = document.TurkerInput.Website.value;
-    if (!website) {
-        swal({title: 'Website field cannot be blank!', type:'error'});
-        return;
-    }
-    if (website.includes("yelp.com")) {
-        swal_html('Be creative!',
-                  'Please do not use <a>yelp.com</a> or its subdomains. Think of a more interesting website.',
-                  'error');
-        return;
-    }
-    return website;
-}
-
 function hasDuplicates(array) {
         return (new Set(array)).size !== array.length;
 }
 
-function getTemplates(question) {
+function getTemplates() {
     var reg = /\(([^)]+)\)/g;
-    var qu = originalQuestion = question.value;
+    var qu = originalQuestion;
+    console.log(qu);
     var matches = qu.match(reg);
     if (!matches) {
-        // alert('You must have at least one (...) template');
-        // question.value = '';
+        swal_html('INTERNAL ERROR', 'invalid template: ' + qu, 'error');
         return false;
     }
     templates = [];
@@ -118,12 +100,12 @@ function getTemplates(question) {
         function (s) { templates.push(s.slice(1, -1)); }
     );
     if (hasDuplicates(templates)) {
-        swal_html('Duplicate blank descriptions',
-             'The template <b>must not have duplicate blank descriptions</b>.<br>For example, <i>"What is the best (place) around (place)?"</i> is not allowed. <br>You have to provide different descriptions: <i>"What is the best (dining place) around (tourist attraction)</i>?"',
-             'error');
+        swal_html('INTERNAL ERROR', 'Duplicate blank descriptions', 'error');
         return false;
     }
     templateText = qu.replace(reg, '<span class="highlighter">{}</span>');
+    console.log(templateText);
+    console.log(templates);
     return true;
 }
 
@@ -155,25 +137,17 @@ function createTableForm() {
                 inputnode.value = TableCache[templates[c]][r];
         }
     }
-    var div = createNode('div', table);
-    addNewLine(div);
+    var instruction = createNode('div', ArgTableNode, ['class', 'example']);
+//    addNewLine(div);
+    instruction.innerHTML = '<br>A live preview will appear below as you fill out the table. The values you\'ve entered will be preserved, so feel free to change the question template if you need to.<br>Please <b>carefully verify</b> the completed questions before you click "submit". You will receive a confirmation code after submission.';
+
     //var button = createNode('button', div, ['type', 'button', 'onclick', 'previewTable()']);
     //addTextNode(button, 'Preview completed questions');
-
-    var instruction = createNode('tr', ArgTableNode, ['class', 'example']);
-    instruction.innerHTML = 'A live preview will appear below as you fill out the table. The values you\'ve entered will be preserved, so feel free to change the question template if you need to.<br>Please <b>carefully verify</b> the completed questions before you click "submit". You will receive a confirmation code after submission.';
 }
 
 function previewTable() {
     removePreview();
-
-    if (templates.length < 2) {
-        swal_html('Not enough blanks', 
-             'You must have <b>at least two blanks</b> in the question template!', 
-             'error');
-        return;
-    }
-
+    
     for (var c = 0; c < templates.length; c++)
         TableCache[templates[c]] = [];
     var matrix = [];

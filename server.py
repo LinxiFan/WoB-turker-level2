@@ -20,7 +20,7 @@ def wrap_template(template):
                 website = 'http://' + website
             self.render(template, 
                         website=website, 
-                        question_template='What is shit?',
+                        question_template='What is the best (shit) at (yoyo) bro?',
                         blank_names=['Yoyo', 'Bro', 'Again'])
             print(i)
             i += 1
