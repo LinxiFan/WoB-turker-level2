@@ -10,7 +10,8 @@ var templates = [],
     ArgTableNode,
     PreviewNode,
     ConfirmationNode,
-    TableCache = {}; // cache already entered text
+    TableCache = {}, // cache already entered text
+    DEBUG = true;
 
 /* upload to the backend
     url - link to the webpage.
@@ -41,10 +42,11 @@ function upload(url, question, data) {
 /*
  * Pass value from Tornado html
  */
-function passTornado(url_, questionTemplate, code1_) {
-    originalQuestion = questionTemplate;
+function passTornado(url_, question, code1_, debug) {
+    originalQuestion = question;
     url = url_;
     code1 = code1_;
+    DEBUG = (debug === 'True');
 }
 
 /*
@@ -209,7 +211,7 @@ function submitForm() {
     for (var r = 0; r < matrix.length; r++) {
         var entry = {};
         for (var c = 0; c < templates.length; c++) {
-            if (false && matrix[r][c] === '___') {
+            if (!DEBUG && matrix[r][c] === '___') {
                 swal_html('Missing value', 
                      'Please fill out all the blanks.<br>Missing value at <b>row ' + (r+1) + ' and column ' + (c+1) + '</b>',
                      'error');
@@ -225,7 +227,7 @@ function submitForm() {
     matrix.forEach(
         function (row) { check_dup_row.push(JSON.stringify(row)); }
     );
-    if (false && hasDuplicates(check_dup_row)) {
+    if (!DEBUG && hasDuplicates(check_dup_row)) {
         swal_html('Duplicate rows',
              'There are duplicates in the table!<br>Please make sure each row is unique.',
              'error');

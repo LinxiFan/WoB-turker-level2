@@ -14,21 +14,35 @@
     <link rel="stylesheet" type="text/css" href="vendor/sweetalert/sweetalert.css">
   </head>
   <body>
-    <script src="main.js"></script>
     <h1>Create Web Questions</h1>
-
-    <p>For more detailed instructions, please see <a href="instructions.html" target="_blank">here</a>. </p>
+    {% if done %}
+    <p> This turker task is currently unavailable. Thanks for your participation! </p>
+    {% else %}
     
+    <script src="main.js"></script>
+    <p>For more detailed instructions, please see <a href="instructions.html" target="_blank">here</a>. </p>
+
     <p> Website: {{ linkify(url, extra_params='target="_blank"') }}</p>
-    <p> Question template: <b><i>{{ question_template }}</i></b> </p>
+    <p> Question template: <b><i>{{ question }}</i></b> </p>
+    <p> Please complete this template by providing concrete examples for the blanks in parentheses: {{blanks}}.</p>
+    <p> A few examples:
+    <ul>
+        {% for example in examples %}
+            <li>{{ example }}</li>
+        {% end %}
+    </ul>
+    <p>Please don't copy the above, and make sure that the questions you provide <b><i>do have answers on the website</i></b>!! </p>
     
     <script>
     <!-- pass values from Tornado to JS -->
     passTornado("{{ escape(url) }}", 
-	            "{{ escape(question_template) }}",
-	            "{{ escape(code1) }}");
+	            "{{ escape(question) }}",
+	            "{{ escape(code1) }}",
+	            "{{ debug }}");
 	// Generates the input table given the question template
 	parseTemplate();
     </script>
+    
+    {% end %}
   </body>
 </html>

@@ -1,29 +1,97 @@
 from tornado import (ioloop, web)
 import hashlib
-import string
 import random
 import os
 import json
-import tornado
 
-db = open('data.jsonl', 'a')
-i = 100
+DEBUG = False
+MAX_EXAMPLE = 15 if DEBUG else 100 # how many instantiations do we want per template?
 
-WEBSITE = '6pm.com'
+templateDB = {}
+progress_json = 'test_progress.json' if DEBUG else 'progress.json'
 
-def wrap_template(template):
+if os.path.exists(progress_json):
+    with open(progress_json) as f:
+        progress = json.load(f)
+else:
+    progress = {}
+
+
+for line in open('test_level1.jsonl' if DEBUG else 'level1.jsonl'):
+    entry = json.loads(line)
+    if entry['url'].lower() == 'test':
+        continue
+    entry['question'] = entry['question'].replace('\n', ' ')
+    code = entry['code']
+    templateDB[code] = entry
+    if code not in progress:
+        progress[code] = 0
+
+
+unfinished_pool = []
+for code in progress:
+    if progress[code] < MAX_EXAMPLE:
+        unfinished_pool.append(code)
+
+
+def update_progress(code, addition, save=True):
+    global progress
+    assert code in progress
+    progress[code] += addition
+    print('PROGRESS UPDATED: {} +{}'.format(code, addition))
+    if save:
+        with open(progress_json, 'w') as f:
+            json.dump(progress, f)
+
+
+def sample_level1():
+    "Return a random template and update unfinished_pool"
+    global unfinished_pool
+    while unfinished_pool:
+        code = random.sample(unfinished_pool, 1)[0]
+        if progress[code] >= MAX_EXAMPLE:
+            unfinished_pool.remove(code)
+        else:
+            return templateDB[code]
+    return None
+
+
+def instantiate(entry, N=5):
+    "Instantiate a template with concrete blanks"
+    assert N < len(entry['data'])
+    question = entry['question']
+    blanks = random.sample(entry['data'], N)
+    examples = []
+    for blank in blanks:
+        q = question
+        for key, val in blank.items():
+            q = q.replace('({})'.format(key), '<u>{}</u>'.format(val))
+        examples.append(q)
+    return examples
+        
+
+level2DB = open('level2.jsonl', 'a')
+
+def wrap_template(html_template):
     class TemplateHandler(web.RequestHandler):
         def get(self):
-            global i
-            website = WEBSITE
-            if not website.startswith('http'):
-                website = 'http://' + website
-            self.render(template, 
-                        website=website, 
-                        question_template='What is the best (shit) at (yoyo) bro?',
-                        blank_names=['Yoyo', 'Bro', 'Again'])
-            print(i)
-            i += 1
+            entry = sample_level1()
+            if entry is None:
+                print('PROGRESS ALL DONE!!!!!!')
+                self.render(html_template, done=True)
+                return
+            
+            url = entry['url']
+            if not url.startswith('http'):
+                url = 'http://' + url
+            self.render(html_template, 
+                        url=url, 
+                        question=entry['question'],
+                        code1=entry['code'],
+                        blanks=' and '.join(map('"{}"'.format, entry['data'][0].keys())),
+                        examples=instantiate(entry, 5),
+                        done=False,
+                        debug=DEBUG)
     return TemplateHandler
 
 
@@ -32,17 +100,20 @@ class SubmitHandler(web.RequestHandler):
         data = json.loads(self.get_argument('data'))
         url = self.get_argument('url')
         question = json.loads(self.get_argument('question'))
-        code = self.get_argument('code')
+        code1 = self.get_argument('code1')
+        code2 = self.get_argument('code2')
 
         recv = json.dumps({
             'data': data,
             'url': url,
             'question': question,
-            'code': code
+            'code1': code1,
+            'code2': code2
         })
-        db.write(recv + '\n')
-        db.flush()
+        level2DB.write(recv + '\n')
+        level2DB.flush()
         print(recv)
+        update_progress(code1, 10)
         self.write('OK')
 
 
