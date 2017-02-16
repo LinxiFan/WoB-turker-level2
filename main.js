@@ -2,6 +2,8 @@
 
 var templates = [],
     originalQuestion = '',
+    url='',
+    code1='', // code from level 1
     templateText = '',
     NUM_ROW = 10,
     BodyNode = document.getElementsByTagName('body')[0], 
@@ -20,26 +22,29 @@ function upload(url, question, data) {
     removePreview();
     question = JSON.stringify(question);
     data = JSON.stringify(data);
-    var code = md5(question + data);
+    var code2 = md5(question + data);
     var submission = {
         'url': url,
         'question': question,
         'data': data,
-        'code': code
+        'code1': code1,
+        'code2': code2
     };
     console.log(submission);
     $.post('/submit', submission, 
         function(response) {
             console.log('uploaded: ', response);
         });
-    return code;
+    return code2;
 }
 
 /*
  * Pass value from Tornado html
  */
-function passTornado(question_template) {
-    originalQuestion = question_template;
+function passTornado(url_, questionTemplate, code1_) {
+    originalQuestion = questionTemplate;
+    url = url_;
+    code1 = code1_;
 }
 
 /*
@@ -72,6 +77,9 @@ function removePreview() {
     }
 }
 
+/**
+ * Will be called once in index.html
+ */
 function parseTemplate() {
     var is_valid = getTemplates();
     // console.log(templates);
@@ -201,7 +209,7 @@ function submitForm() {
     for (var r = 0; r < matrix.length; r++) {
         var entry = {};
         for (var c = 0; c < templates.length; c++) {
-            if (matrix[r][c] === '___') {
+            if (false && matrix[r][c] === '___') {
                 swal_html('Missing value', 
                      'Please fill out all the blanks.<br>Missing value at <b>row ' + (r+1) + ' and column ' + (c+1) + '</b>',
                      'error');
@@ -217,19 +225,16 @@ function submitForm() {
     matrix.forEach(
         function (row) { check_dup_row.push(JSON.stringify(row)); }
     );
-    if (hasDuplicates(check_dup_row)) {
+    if (false && hasDuplicates(check_dup_row)) {
         swal_html('Duplicate rows',
              'There are duplicates in the table!<br>Please make sure each row is unique.',
              'error');
         return;
     }
 
-    var website = checkWebsite();
-    if (!website) return;
-
-    var code = upload(website, originalQuestion, D);
+    var code2 = upload(url, originalQuestion, D);
     ConfirmationNode = createNode('p', BodyNode);
-    ConfirmationNode.innerHTML = 'Your submission code is <br><br><span class="highlighter">' + code + '</span><br><br>Please copy and paste it back to the Amazon Mechanical Turk page. <br>Thanks for your participation! We really appreciate your time.';
+    ConfirmationNode.innerHTML = 'Your submission code is <br><br><span class="highlighter">' + code2 + '</span><br><br>Please copy and paste it back to the Amazon Mechanical Turk page. <br>Thanks for your participation! We really appreciate your time.';
     swal('Thanks!', 
          'You have successfully completed the task. Please copy and paste the submission code back to the Amazon Mechanical Turk page.',
          'success');
