@@ -20,12 +20,15 @@
     {% else %}
     
     <script src="main.js"></script>
-    <p>For more detailed instructions, please see <a href="instructions.html" target="_blank">here</a>. </p>
+    <p>Your task is to complete the question template by filling out the blanks. 
+    Each question you give should have an answer on the given website. </p>
+    <p> However, you don't actually need to answer them. 
+    All we need are <i>answerable</i> questions on the designated website.</p>
 
-    <p> Website: {{ linkify(url, extra_params='target="_blank"') }}</p>
+    <p> Please visit the website here: {{ linkify(url, extra_params='target="_blank"') }}</p>
     <p> Question template: <b><i>{{ question }}</i></b> </p>
-    <p> Please complete this template by providing concrete examples for the blanks in parentheses: {{blanks}}.</p>
-    <p> A few examples:
+    <p> Please provide examples for the blanks enclosed in "()" above: {{blanks}}.</p>
+    <p> A few completed examples for your reference:
     <ul>
         {% for example in examples %}
             <li>{{ example }}</li>

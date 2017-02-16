@@ -5,7 +5,7 @@ import os
 import json
 
 DEBUG = False
-MAX_EXAMPLE = 15 if DEBUG else 100 # how many instantiations do we want per template?
+MAX_EXAMPLE = 25 if DEBUG else 100 # how many instantiations do we want per template?
 
 templateDB = {}
 progress_json = 'test_progress.json' if DEBUG else 'progress.json'
@@ -38,7 +38,7 @@ def update_progress(code, addition, save=True):
     global progress
     assert code in progress
     progress[code] += addition
-    print('PROGRESS UPDATED: {} +{}'.format(code, addition))
+    print('PROGRESS UPDATED {} +{}'.format(code, addition))
     if save:
         with open(progress_json, 'w') as f:
             json.dump(progress, f)
@@ -88,7 +88,7 @@ def wrap_template(html_template):
                         url=url, 
                         question=entry['question'],
                         code1=entry['code'],
-                        blanks=' and '.join(map('"{}"'.format, entry['data'][0].keys())),
+                        blanks=' and '.join(map('[{}]'.format, entry['data'][0].keys())),
                         examples=instantiate(entry, 5),
                         done=False,
                         debug=DEBUG)
@@ -124,6 +124,7 @@ handlers = [
     (r"/(.*\.css)", web.StaticFileHandler, {"path": "./"}),
     (r"/(.*\.html)", web.StaticFileHandler, {"path": "./"}),
     (r"/(.*\.jsonl)", web.StaticFileHandler, {"path": "./"}),
+    (r"/(.*\.json)", web.StaticFileHandler, {"path": "./"}),
 ]
 
 settings = {

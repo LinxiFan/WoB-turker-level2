@@ -149,10 +149,7 @@ function createTableForm() {
     }
     var instruction = createNode('div', ArgTableNode, ['class', 'example']);
 //    addNewLine(div);
-    instruction.innerHTML = '<br>A live preview will appear below as you fill out the table. The values you\'ve entered will be preserved, so feel free to change the question template if you need to.<br>Please <b>carefully verify</b> the completed questions before you click "submit". You will receive a confirmation code after submission.';
-
-    //var button = createNode('button', div, ['type', 'button', 'onclick', 'previewTable()']);
-    //addTextNode(button, 'Preview completed questions');
+    instruction.innerHTML = '<br>A live preview will appear below as you fill out the table. <br>Please <b>carefully verify</b> the completed questions before you click "submit". You will receive a confirmation code after submission.';
 }
 
 function previewTable() {
@@ -189,7 +186,7 @@ function previewTable() {
         var entry = createNode('tr', PreviewNode_);
         if (r == -1) {
             entry = createNode('td', entry);
-            entry.innerHTML = '<h2><b>Preview completed question</b></h2>';
+            entry.innerHTML = '<h2><b>Preview completed questions</b></h2>';
         } else {
             entry = createNode('td', entry, ['class', 'tdborder']);
             entry.innerHTML = strformat(templateText, ...matrix[r]);
