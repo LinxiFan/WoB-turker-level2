@@ -90,7 +90,11 @@ def instantiate(entry, N=5):
     return examples
         
 
-level2DB = open(level2_json, 'a')
+def update_level2db(dat):
+    with open(level2_json, 'a') as f:
+        print(dat, file=f)
+    print(dat)
+
 
 def wrap_template(html_template):
     class TemplateHandler(web.RequestHandler):
@@ -130,9 +134,7 @@ class SubmitHandler(web.RequestHandler):
             'code1': code1,
             'code2': code2
         })
-        level2DB.write(recv + '\n')
-        level2DB.flush()
-        print(recv)
+        update_level2db(recv)
         update_progress(code1, 10)
         self.write('OK')
 
