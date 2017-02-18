@@ -71,6 +71,7 @@ def sample_level1():
         if progress[code] >= MAX_EXAMPLE:
             unfinished_pool.remove(code)
         else:
+            print('# sample:', code)
             return templateDB[code]
     return None
 
@@ -84,7 +85,7 @@ def instantiate(entry, N=5):
     for blank in blanks:
         q = question
         for key, val in blank.items():
-            q = q.replace('({})'.format(key), '<u>{}</u>'.format(val))
+            q = q.replace(u'({})'.format(key), u'<u>{}</u>'.format(val))
         examples.append(q)
     return examples
         
