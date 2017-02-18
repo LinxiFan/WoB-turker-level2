@@ -1,5 +1,12 @@
 #!/bin/bash
-wget http://ec2-52-33-170-48.us-west-2.compute.amazonaws.com:8080/data.jsonl -O turker.jsonl
-less turker.jsonl
+function get() {
+    wget http://ec2-52-33-170-48.us-west-2.compute.amazonaws.com:8080/$1 -O $1
+    if [[ $# -eq 2 ]]; then
+        less $1
+    fi
+}
+
+get level2.jsonl -v
+get progress.json
 
 # ssh -i wob_openai.pem ubuntu@ec2-52-33-170-48.us-west-2.compute.amazonaws.com

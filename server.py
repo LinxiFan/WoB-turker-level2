@@ -7,8 +7,15 @@ import json
 DEBUG = False
 MAX_EXAMPLE = 25 if DEBUG else 100 # how many instantiations do we want per template?
 
-templateDB = {}
 progress_json = 'test_progress.json' if DEBUG else 'progress.json'
+level1_json = 'test_level1.jsonl' if DEBUG else 'level1.jsonl'
+level2_json = 'level2.jsonl'
+# =======================================================
+
+templateDB = {}
+progress_json = os.path.join('data', progress_json)
+level1_json = os.path.join('data', level1_json)
+level2_json = os.path.join('data', level2_json)
 
 if os.path.exists(progress_json):
     with open(progress_json) as f:
@@ -17,7 +24,7 @@ else:
     progress = {}
 
 
-for line in open('test_level1.jsonl' if DEBUG else 'level1.jsonl'):
+for line in open(level1_json):
     entry = json.loads(line)
     if entry['url'].lower() == 'test':
         continue
@@ -70,7 +77,7 @@ def instantiate(entry, N=5):
     return examples
         
 
-level2DB = open('level2.jsonl', 'a')
+level2DB = open(level2_json, 'a')
 
 def wrap_template(html_template):
     class TemplateHandler(web.RequestHandler):
