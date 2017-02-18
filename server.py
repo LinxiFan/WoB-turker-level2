@@ -9,13 +9,17 @@ MAX_EXAMPLE = 25 if DEBUG else 100 # how many instantiations do we want per temp
 
 progress_json = 'test_progress.json' if DEBUG else 'progress.json'
 level1_json = 'test_level1.jsonl' if DEBUG else 'level1.jsonl'
-level2_json = 'level2.jsonl'
+level2_json = 'test_level2.jsonl' if DEBUG else 'level2.jsonl'
+annotation = 'test_annotation.jsonl' if DEBUG else  'annotation.jsonl'
+
+PORT = 8080
 # =======================================================
 
 templateDB = {}
 progress_json = os.path.join('data', progress_json)
 level1_json = os.path.join('data', level1_json)
 level2_json = os.path.join('data', level2_json)
+annotation = os.path.join('data', annotation)
 
 if os.path.exists(progress_json):
     with open(progress_json) as f:
@@ -24,16 +28,24 @@ else:
     progress = {}
 
 
+good_code = set()
+for line in open(annotation):
+    entry = json.loads(line)
+    if entry['difficulty'] == 0:
+        good_code.add(entry['code'])
+
 for line in open(level1_json):
     entry = json.loads(line)
-    if entry['url'].lower() == 'test':
+    code = entry['code']
+    if (code not in good_code
+        or entry['url'].lower() == 'test'):
         continue
     entry['question'] = entry['question'].replace('\n', ' ')
-    code = entry['code']
     templateDB[code] = entry
     if code not in progress:
         progress[code] = 0
 
+print('# Number of good code:', len(good_code))
 
 unfinished_pool = []
 for code in progress:
@@ -45,7 +57,7 @@ def update_progress(code, addition, save=True):
     global progress
     assert code in progress
     progress[code] += addition
-    print('PROGRESS UPDATED {} +{}'.format(code, addition))
+    print('# PROGRESS UPDATED {} +{}'.format(code, addition))
     if save:
         with open(progress_json, 'w') as f:
             json.dump(progress, f)
@@ -84,7 +96,7 @@ def wrap_template(html_template):
         def get(self):
             entry = sample_level1()
             if entry is None:
-                print('PROGRESS ALL DONE!!!!!!')
+                print('# PROGRESS ALL DONE!!!!!!')
                 self.render(html_template, done=True)
                 return
             
@@ -143,7 +155,7 @@ settings = {
 if __name__ == "__main__":
     # start main application.
     application = web.Application(handlers, **settings)
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", PORT))
     application.listen(port, address="0.0.0.0")
-    print('localhost:8080')
+    print('# localhost:{}'.format(PORT))
     ioloop.IOLoop.current().start()

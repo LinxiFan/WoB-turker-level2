@@ -1,0 +1,4 @@
+{"gui": ["text", "search"], "code": "1122", "semantic": "dining", "difficulty": 0}
+{"gui": ["search"], "code": "2233", "semantic": "shopping", "difficulty": 2}
+{"gui": ["text", "search"], "code": "3344", "semantic": "dining", "difficulty": 0}
+{"gui": ["search"], "code": "4455", "semantic": "shopping", "difficulty": 0}
