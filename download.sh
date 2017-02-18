@@ -6,7 +6,7 @@ function get() {
     fi
 }
 
-get level2.jsonl -v
-get progress.json
+get data/level2.jsonl -v
+get data/progress.json
 
 # ssh -i wob_openai.pem ubuntu@ec2-52-33-170-48.us-west-2.compute.amazonaws.com

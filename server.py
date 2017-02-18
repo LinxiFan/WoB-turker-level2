@@ -57,7 +57,7 @@ def update_progress(code, addition, save=True):
     global progress
     assert code in progress
     progress[code] += addition
-    print('# PROGRESS UPDATED {} +{}'.format(code, addition))
+    print('# Progress {} +{}'.format(code, addition))
     if save:
         with open(progress_json, 'w') as f:
             json.dump(progress, f)
@@ -97,7 +97,7 @@ def wrap_template(html_template):
         def get(self):
             entry = sample_level1()
             if entry is None:
-                print('# PROGRESS ALL DONE!!!!!!')
+                print('# DONE!!!!!!')
                 self.render(html_template, done=True)
                 return
             
