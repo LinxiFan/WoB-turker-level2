@@ -21,6 +21,9 @@ urlretrieve(HTTP.format(AWS, 'progress.json'), filename='data/progress.json')
 os.system('wc -l data/level2.jsonl')
 os.system('less data/level2.jsonl')
 progress = json.load(open('data/progress.json'))
+i = 0
 for code, val in progress.items():
     if val > 0:
         print(code, '+', val)
+        i += 1
+print('Number of unique code touched:', i)
