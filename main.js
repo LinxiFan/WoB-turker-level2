@@ -109,6 +109,8 @@ function getTemplates() {
     matches.forEach(
         function (s) { templates.push(s.slice(1, -1)); }
     );
+    // augment with a special ANSWER field
+    templates.push('ANSWER');
     if (hasDuplicates(templates)) {
         swal_html('INTERNAL ERROR', 'Duplicate blank descriptions', 'error');
         return false;
@@ -149,7 +151,9 @@ function createTableForm() {
     }
     var instruction = createNode('div', ArgTableNode, ['class', 'example']);
 //    addNewLine(div);
-    instruction.innerHTML = '<br>A live preview will appear below as you fill out the table. <br>Please <b>carefully verify</b> the completed questions before you click "submit". You will receive a confirmation code after submission.';
+    instruction.innerHTML = `<br>A live preview will appear below as you fill out the table. 
+    <br>Please <b>carefully verify</b> the completed questions and answers before you click "submit". 
+    You will receive a confirmation code after submission.`;
 }
 
 function previewTable() {

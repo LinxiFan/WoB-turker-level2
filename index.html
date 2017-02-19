@@ -20,21 +20,19 @@
     {% else %}
     
     <script src="main.js"></script>
-    <p>Your task is to complete the question template by filling out the blanks. 
-    Each question you give should have an answer on the given website. </p>
-    <p> However, you don't actually need to answer them. 
-    All we need are <i>answerable</i> questions on the designated website.</p>
+    <p>Your task is to complete the question template by filling out the blanks, and answer them too. </p>
 
     <p> Please visit the website here: {{ linkify(url, extra_params='target="_blank"') }}</p>
     <p> Question template: <b><i>{{ question }}</i></b> </p>
     <p> Please provide examples for the blanks enclosed in "()" above: {{blanks}}.</p>
+    <p> Please fill in the answers you find on the website in the "ANSWER" column below. </p>
     <p> A few completed examples for your reference:
     <ul>
         {% for example in examples %}
             <li>{{ example }}</li>
         {% end %}
     </ul>
-    <p>Please don't copy the above, and make sure that the questions you provide <b><i>do have answers on the website</i></b>!! </p>
+    <p>Please don't copy the above example! </p>
     
     <script>
     <!-- pass values from Tornado to JS -->
