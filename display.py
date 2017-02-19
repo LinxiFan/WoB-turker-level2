@@ -11,5 +11,9 @@ for line in open(sys.argv[1]):
         question = question0
         for k, v in entry.items():
             question = question.replace('({})'.format(k), v)
-        print(question)
+        if 'ANSWER' in entry:
+            ans = '-> ' + entry['ANSWER']
+        else:
+            ans = ''
+        print(question, ans)
     print('-'*10)
