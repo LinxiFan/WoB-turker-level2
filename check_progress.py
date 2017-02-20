@@ -15,7 +15,7 @@ if len(sys.argv) > 1:
 
 
 HTTP = 'http://{}:8080/data/{}'
-urlretrieve(HTTP.format(AWS, 'level2.jsonl'), filename='data/level2.jsonl')
+urlretrieve(HTTP.format(AWS, 'level2.jsonl'), filename='data/raw_level2.jsonl')
 urlretrieve(HTTP.format(AWS, 'progress.json'), filename='data/progress.json')
 
 progress = json.load(open('data/progress.json'))
@@ -28,6 +28,5 @@ for code, val in progress.items():
     if val > 100:
         i +=1
 print('Total HITs:', total)
-print(i)
-os.system('wc -l data/level2.jsonl')
-# os.system('less data/level2.jsonl')
+os.system('wc -l data/raw_level2.jsonl')
+os.system('mv data/raw_level2.jsonl data/level2.jsonl')
