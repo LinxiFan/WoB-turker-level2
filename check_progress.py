@@ -19,11 +19,15 @@ urlretrieve(HTTP.format(AWS, 'level2.jsonl'), filename='data/level2.jsonl')
 urlretrieve(HTTP.format(AWS, 'progress.json'), filename='data/progress.json')
 
 progress = json.load(open('data/progress.json'))
+total = 0
 i = 0
 for code, val in progress.items():
     if val > 0:
         print(code, '+', val)
-        i += 1
-print('Number of unique code touched:', i)
+        total += val
+    if val > 100:
+        i +=1
+print('Total HITs:', total)
+print(i)
 os.system('wc -l data/level2.jsonl')
-os.system('less data/level2.jsonl')
+# os.system('less data/level2.jsonl')

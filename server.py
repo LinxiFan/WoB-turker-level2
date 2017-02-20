@@ -5,7 +5,7 @@ import os
 import json
 
 DEBUG = False
-MAX_EXAMPLE = 25 if DEBUG else 100 # how many instantiations do we want per template?
+MAX_EXAMPLE = 20 if DEBUG else 100 # how many instantiations do we want per template?
 
 progress_json = 'test_progress.json' if DEBUG else 'progress.json'
 level1_json = 'test_level1.jsonl' if DEBUG else 'level1.jsonl'
@@ -51,6 +51,7 @@ unfinished_pool = []
 for code in progress:
     if progress[code] < MAX_EXAMPLE:
         unfinished_pool.append(code)
+print('# Number of unfinished:', len(unfinished_pool))
 
 
 def update_progress(code, addition, save=True):
