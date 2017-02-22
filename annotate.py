@@ -7,10 +7,10 @@ Annotate questions by:
     s=search
     t=text
     d=date
-    m=menu (choose from a few options)
     dr=dropdown
     sc=scroll
     sp=special control (plus/minus)
+    c=click
 
 - Semantics:
     t=transportation (flight, railway, bus)

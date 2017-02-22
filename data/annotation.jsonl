@@ -1,103 +1,103 @@
-{"gui": ["text", "search"], "code": "13984fdfd45ecd4717ff255568531b48", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "search"], "code": "4196f7c543edbf496790c5c153f07acb", "semantic": "dining", "difficulty": 0}
-{"gui": ["search"], "code": "dfdcbcb911d2c24b58149b838072df9a", "semantic": "shopping", "difficulty": 0}
-{"gui": ["search", "menu"], "code": "1539aa1023eb774fdbbc9d79a579906a", "semantic": "shopping", "difficulty": 0}
-{"gui": ["search", "menu"], "code": "7c9b6a04638af5a5e0c75cab728c445e", "semantic": "shopping", "difficulty": 0}
-{"gui": ["search", "menu", "search"], "code": "35025235e6ac583a113f6f482db6e5bf", "semantic": "dining", "difficulty": 0}
-{"gui": ["search", "search"], "code": "297d25209757d635b6737159ae624072", "semantic": "dining", "difficulty": 0}
-{"gui": ["menu", "scroll"], "code": "b69f9fcd737292be427e459faf86ebab", "semantic": "other", "difficulty": 0}
-{"gui": ["search", "dropdown", "dropdown"], "code": "869f975fdb5cccb1da5ab5ba4ae131e7", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["text", "search"], "code": "a20e20da958e98e6544bd603c13fae1b", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "search"], "code": "63cb788acf3e6c2476b4a8be949ef42d", "semantic": "dining", "difficulty": 0}
-{"gui": ["menu", "text", "text", "date"], "code": "e10cf65a4dc2bf17c451f819a98769c2", "semantic": "transportation", "difficulty": 0}
-{"gui": ["text", "search"], "code": "5390090bd60daa4b6285dc8945fb7f59", "semantic": "other", "difficulty": 0}
-{"gui": ["text", "date"], "code": "59b668c49b44d52cb6bb2eb1e7f0e710", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "search"], "code": "0148fda06b2a7ecfe8154319e46d4d2c", "semantic": "dining", "difficulty": 0}
-{"gui": ["search", "search"], "code": "33fdd0ead2f16bed3f28a97dc5da6030", "semantic": "dining", "difficulty": 0}
-{"gui": ["menu", "text", "date"], "code": "5cb898b20ab8d281c62a4d96e665a8da", "semantic": "transportation", "difficulty": 0}
-{"gui": ["text", "dropdown", "dropdown"], "code": "bfd2cabb48496643418280a746c2e3e9", "semantic": "calculator", "difficulty": 0}
-{"gui": ["text", "text", "date"], "code": "b45bbb28217191ce3cf0a011754a5ba2", "semantic": "transportation", "difficulty": 0}
-{"gui": ["scroll"], "code": "e0c15ca10059d8a1088fea43a08ccf90", "semantic": "other", "difficulty": 0}
-{"gui": ["text", "search"], "code": "95334b3030ab7f0aa1647e12a993a0d6", "semantic": "dining", "difficulty": 0}
-{"gui": ["scroll", "menu"], "code": "e1524d7d23a16eb5b82983626b7633fb", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["text", "date", "date", "special", "special"], "code": "d7398fa695165fad5ae6014065a85d64", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "text"], "code": "0d9eac5d67ed79454cb972161414e5a9", "semantic": "calculator", "difficulty": 0}
-{"gui": ["-"], "code": "9c23607ceddfacb8b5191fb8157e2330", "semantic": "-", "difficulty": 2}
-{"gui": ["search", "dropdown", "menu"], "code": "5c76c28a710d5fcb040652e66f3954a0", "semantic": "housing", "difficulty": 0}
-{"gui": ["search", "search"], "code": "c894e95ee566e3453710018ff7be25c9", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["search", "menu", "scroll"], "code": "bf35ad64388b1f9544aaf4363ef8b1b4", "semantic": "other", "difficulty": 0}
-{"gui": ["text", "text", "text"], "code": "eab70989b1e77f2a42d4d2a1b4d2f939", "semantic": "calculator", "difficulty": 0}
-{"gui": ["text", "search"], "code": "992ddc23f3d9daf5396df7f76ec7d423", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["search", "search"], "code": "2770dc312f43a1f2277b16544a2363e5", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["search", "dropdown", "date"], "code": "758b27f45dd8b0be027951568a60c9a9", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["-"], "code": "2eef8f73d3fb1180c8de1d32dd2f50ed", "semantic": "-", "difficulty": 2}
-{"gui": ["text", "scroll"], "code": "85982ea6ebb5fcb509f2231fc25f4321", "semantic": "other", "difficulty": 0}
-{"gui": ["text", "date", "date", "dropdown", "dropdown"], "code": "ca0047414fa9beea7ed486a80b17e72d", "semantic": "housing", "difficulty": 0}
-{"gui": ["-"], "code": "0cecda88cc465573af04eb5025d5d7bf", "semantic": "-", "difficulty": 2}
-{"gui": ["text", "search"], "code": "22f6bf3f86694977a7bb3cd675e7366d", "semantic": "dining", "difficulty": 0}
-{"gui": ["search", "search"], "code": "b31a833d329703f6b6ff3a679cb4c336", "semantic": "transportation", "difficulty": 0}
-{"gui": ["-"], "code": "0b282cacd7d961be3e7c1da7914f7e43", "semantic": "-", "difficulty": 1}
-{"gui": ["menu", "dropdown", "special", "scroll"], "code": "0662b672008aa6fef683594fe9e3d901", "semantic": "shopping", "difficulty": 0}
-{"gui": ["search", "menu", "text", "text"], "code": "d1d53aecdf9a9b251c4d50fd0b1be1f2", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "search"], "code": "f313b0c222977cb0fe45d973790c182d", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "text", "date"], "code": "20b5eb766ce08695c2e77b180757a27b", "semantic": "transportation", "difficulty": 0}
-{"gui": ["dropdown", "dropdown", "dropdown"], "code": "61ac2b587639365658a886c12d176178", "semantic": "calculator", "difficulty": 0}
-{"gui": ["text", "search"], "code": "d85eed59a601901af6901e839ef8147f", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "date", "date", "special"], "code": "05ef3082453b192d61997a9096e09a97", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "search"], "code": "8c7dab24df697166674920db24052f38", "semantic": "other", "difficulty": 0}
-{"gui": ["text", "date", "date", "special", "special"], "code": "de47f0b8384a86be2604f51999d64166", "semantic": "housing", "difficulty": 0}
-{"gui": ["menu", "dropdown", "search"], "code": "dc832790ec0e25fade2b70379e4c480a", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["-"], "code": "cce16cd9b5757e2534b266369e152c15", "semantic": "-", "difficulty": 1}
-{"gui": ["search", "search"], "code": "5290a9a2b9f4a584b25f8d18ee7fcc31", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "search"], "code": "ba48c5fdcabeb548591c6b8e654ace1e", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "search"], "code": "9a201bf3f588b3addf2bc3f804c0df38", "semantic": "other", "difficulty": 0}
-{"gui": ["-"], "code": "fc8ed63b2805e8614f982b12f3df02bf", "semantic": "-", "difficulty": 2}
-{"gui": ["-"], "code": "b12bb7d43865dcb0f4441186e2e19dc4", "semantic": "-", "difficulty": 2}
-{"gui": ["-"], "code": "b7c15001e74409507cd52284747ecb18", "semantic": "-", "difficulty": 2}
-{"gui": ["dropdown", "scroll"], "code": "f7474ed5363bdff84cd53208e4c7dd02", "semantic": "other", "difficulty": 0}
-{"gui": ["search", "search"], "code": "90791b69558ecdf8960ac98a150820f3", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["search", "special", "menu"], "code": "b6141fab119eef5e5379ef6ecbc1c9b9", "semantic": "housing", "difficulty": 0}
-{"gui": ["-"], "code": "03f82c37ba99fb29693c72df731868fd", "semantic": "-", "difficulty": 1}
-{"gui": ["search", "search"], "code": "00623a8426fa3e770c2ae981c78b05b0", "semantic": "transportation", "difficulty": 0}
-{"gui": ["-"], "code": "dccbb6f2249ad06ff6fe9b46f3bec2e4", "semantic": "-", "difficulty": 2}
-{"gui": ["text", "text"], "code": "0782c9b2edf99299d6b04eeff5a07f0a", "semantic": "calculator", "difficulty": 0}
-{"gui": ["text", "date", "date", "special", "special"], "code": "deec3f1a111fca1ab2cabb9535c33016", "semantic": "housing", "difficulty": 0}
-{"gui": ["-"], "code": "3acc725b92057263ad867e389eba0a11", "semantic": "-", "difficulty": 2}
-{"gui": ["text", "special", "special"], "code": "0dd7946d2369affcbd23448a2f47c978", "semantic": "housing", "difficulty": 0}
-{"gui": ["search", "menu"], "code": "6d988a45c66511f78cf68af28e0be82e", "semantic": "shopping", "difficulty": 0}
-{"gui": ["-"], "code": "81939676f975f88664fba04f1bb1dfe7", "semantic": "-", "difficulty": 1}
-{"gui": ["-"], "code": "c291f9e94179843bfe653181e3e4863b", "semantic": "-", "difficulty": 2}
-{"gui": ["-"], "code": "94457fb2e7b0ff50b14083e1d801de85", "semantic": "-", "difficulty": 2}
-{"gui": ["search", "menu"], "code": "808cbd27bbfda533f021bad0e1b9d6fa", "semantic": "dining", "difficulty": 0}
-{"gui": ["search", "text"], "code": "f5a877cc996d2390d5613a7b917f636d", "semantic": "shopping", "difficulty": 0}
-{"gui": ["-"], "code": "b44bbed569e11e13540b0aae7f6b4df1", "semantic": "-", "difficulty": 1}
-{"gui": ["text", "search"], "code": "c5a3eef40ae278ab752a246ac5db7135", "semantic": "shopping", "difficulty": 0}
-{"gui": ["text", "text", "date", "date"], "code": "7a8758db8742988d9ed9ae33a5c35aab", "semantic": "transportation", "difficulty": 0}
-{"gui": ["text", "text", "text"], "code": "f8aa649e05d0795109d2065a7943b73d", "semantic": "calculator", "difficulty": 0}
-{"gui": ["text", "search"], "code": "bada4bfa2d98b7df1466e07c827e4ad7", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "date", "search"], "code": "6a373650ca61e23b8ead1d2ed123fa8b", "semantic": "housing", "difficulty": 0}
-{"gui": ["-"], "code": "e1d4132f1643aee2852a381d2aa8f1e1", "semantic": "-", "difficulty": 2}
-{"gui": ["text", "text"], "code": "02f9328489547a55cb06b873e8f54a76", "semantic": "calculator", "difficulty": 0}
-{"gui": ["dropdown", "text", "dropdown"], "code": "5b267bd311bb9f1c75e1daba91154e91", "semantic": "other", "difficulty": 0}
-{"gui": ["date", "date"], "code": "12d8b316f7e241580a69b0f599af6ba8", "semantic": "transportation", "difficulty": 0}
-{"gui": ["-"], "code": "cd994ea519299f35f30c9f0c95a4df38", "semantic": "-", "difficulty": 1}
-{"gui": ["search", "search"], "code": "7ad790c6b5ef45db34bd2977773ab3ae", "semantic": "transportation", "difficulty": 0}
-{"gui": ["search", "menu"], "code": "041a73dac284e0dbeaa3fca07ed0e1a5", "semantic": "housing", "difficulty": 0}
-{"gui": ["search", "search"], "code": "bef869538af74b53d17091cce3a6a6be", "semantic": "transportation", "difficulty": 0}
-{"gui": ["-"], "code": "9f39f1a65296631072469a9c5db572dd", "semantic": "-", "difficulty": 1}
-{"gui": ["scroll"], "code": "4563b0ab5252ca58bdf200a6d90d7395", "semantic": "other", "difficulty": 0}
-{"gui": ["search", "menu"], "code": "83ba1bc1a197653f6b7bc9a4da054ec5", "semantic": "shopping", "difficulty": 0}
-{"gui": ["menu", "dropdown"], "code": "5079d3a2b7b18c5a44f972536f0526f9", "semantic": "dining", "difficulty": 0}
-{"gui": ["text", "text"], "code": "bef4eef4f0bb56aefde8ade92784929b", "semantic": "calculator", "difficulty": 0}
-{"gui": ["search"], "code": "87a7e3d3c8a14fc11c7bc7eade00b861", "semantic": "dining", "difficulty": 0}
-{"gui": ["menu", "dropdown", "search"], "code": "46bbd7ef677f8754dee5199c27b8db30", "semantic": "entertainment", "difficulty": 0}
-{"gui": ["search"], "code": "cad9165682a21262f0d615f599c6b0d3", "semantic": "shopping", "difficulty": 0}
-{"gui": ["scroll"], "code": "345c3933a68a8fb04c8567e5051fbd74", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "date", "date", "dropdown", "dropdown"], "code": "4502a7a6ffb941c4fecbca615d6b79cb", "semantic": "housing", "difficulty": 0}
-{"gui": ["text", "text"], "code": "523b54bd0f295b67faecaf1ba88c7263", "semantic": "other", "difficulty": 0}
-{"gui": ["-"], "code": "321f5783ddc9d173cf727046f0fffb6c", "semantic": "-", "difficulty": 2}
-{"gui": ["-"], "code": "b429437753672f0999ff7a77a8e82e3a", "semantic": "-", "difficulty": 2}
-{"gui": ["search", "menu", "dropdown", "menu"], "code": "9d9094ea4e376f9179bac74d71eb9018", "semantic": "shopping", "difficulty": 0}
-{"gui": ["text", "text"], "code": "fec21de749b27360ffbe8b41272e58ee", "semantic": "other", "difficulty": 0}
-{"gui": ["-"], "code": "cca3350311b9e224cd3c2c07c7f1382d", "semantic": "-", "difficulty": 1}
-{"gui": ["text", "text", "text"], "code": "9a9f00db8fb74a399bdf292e9a13ebdb", "semantic": "calculator", "difficulty": 0}
+{"code": "13984fdfd45ecd4717ff255568531b48", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "4196f7c543edbf496790c5c153f07acb", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "dfdcbcb911d2c24b58149b838072df9a", "difficulty": 0, "gui": ["search"], "semantic": "shopping"}
+{"code": "1539aa1023eb774fdbbc9d79a579906a", "difficulty": 0, "gui": ["search", "click"], "semantic": "shopping"}
+{"code": "7c9b6a04638af5a5e0c75cab728c445e", "difficulty": 0, "gui": ["search", "click"], "semantic": "shopping"}
+{"code": "35025235e6ac583a113f6f482db6e5bf", "difficulty": 0, "gui": ["search", "click", "search"], "semantic": "dining"}
+{"code": "297d25209757d635b6737159ae624072", "difficulty": 0, "gui": ["search", "search"], "semantic": "dining"}
+{"code": "b69f9fcd737292be427e459faf86ebab", "difficulty": 0, "gui": ["click", "scroll"], "semantic": "other"}
+{"code": "869f975fdb5cccb1da5ab5ba4ae131e7", "difficulty": 0, "gui": ["search", "dropdown", "dropdown"], "semantic": "entertainment"}
+{"code": "a20e20da958e98e6544bd603c13fae1b", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "63cb788acf3e6c2476b4a8be949ef42d", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "e10cf65a4dc2bf17c451f819a98769c2", "difficulty": 0, "gui": ["click", "text", "text", "date"], "semantic": "transportation"}
+{"code": "5390090bd60daa4b6285dc8945fb7f59", "difficulty": 0, "gui": ["text", "search"], "semantic": "other"}
+{"code": "59b668c49b44d52cb6bb2eb1e7f0e710", "difficulty": 0, "gui": ["text", "date"], "semantic": "housing"}
+{"code": "0148fda06b2a7ecfe8154319e46d4d2c", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "33fdd0ead2f16bed3f28a97dc5da6030", "difficulty": 0, "gui": ["search", "search"], "semantic": "dining"}
+{"code": "5cb898b20ab8d281c62a4d96e665a8da", "difficulty": 0, "gui": ["click", "text", "date"], "semantic": "transportation"}
+{"code": "bfd2cabb48496643418280a746c2e3e9", "difficulty": 0, "gui": ["text", "dropdown", "dropdown"], "semantic": "calculator"}
+{"code": "b45bbb28217191ce3cf0a011754a5ba2", "difficulty": 0, "gui": ["text", "text", "date"], "semantic": "transportation"}
+{"code": "e0c15ca10059d8a1088fea43a08ccf90", "difficulty": 0, "gui": ["scroll"], "semantic": "other"}
+{"code": "95334b3030ab7f0aa1647e12a993a0d6", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "e1524d7d23a16eb5b82983626b7633fb", "difficulty": 0, "gui": ["scroll", "click"], "semantic": "entertainment"}
+{"code": "d7398fa695165fad5ae6014065a85d64", "difficulty": 0, "gui": ["text", "date", "date", "special", "special"], "semantic": "housing"}
+{"code": "0d9eac5d67ed79454cb972161414e5a9", "difficulty": 0, "gui": ["text", "text"], "semantic": "calculator"}
+{"code": "9c23607ceddfacb8b5191fb8157e2330", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "5c76c28a710d5fcb040652e66f3954a0", "difficulty": 0, "gui": ["search", "dropdown", "click"], "semantic": "housing"}
+{"code": "c894e95ee566e3453710018ff7be25c9", "difficulty": 0, "gui": ["search", "search"], "semantic": "entertainment"}
+{"code": "bf35ad64388b1f9544aaf4363ef8b1b4", "difficulty": 0, "gui": ["search", "click", "scroll"], "semantic": "other"}
+{"code": "eab70989b1e77f2a42d4d2a1b4d2f939", "difficulty": 0, "gui": ["text", "text", "text"], "semantic": "calculator"}
+{"code": "992ddc23f3d9daf5396df7f76ec7d423", "difficulty": 0, "gui": ["text", "search"], "semantic": "entertainment"}
+{"code": "2770dc312f43a1f2277b16544a2363e5", "difficulty": 0, "gui": ["search", "search"], "semantic": "entertainment"}
+{"code": "758b27f45dd8b0be027951568a60c9a9", "difficulty": 0, "gui": ["search", "dropdown", "date"], "semantic": "entertainment"}
+{"code": "2eef8f73d3fb1180c8de1d32dd2f50ed", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "85982ea6ebb5fcb509f2231fc25f4321", "difficulty": 0, "gui": ["text", "scroll"], "semantic": "other"}
+{"code": "ca0047414fa9beea7ed486a80b17e72d", "difficulty": 0, "gui": ["text", "date", "date", "dropdown", "dropdown"], "semantic": "housing"}
+{"code": "0cecda88cc465573af04eb5025d5d7bf", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "22f6bf3f86694977a7bb3cd675e7366d", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "b31a833d329703f6b6ff3a679cb4c336", "difficulty": 0, "gui": ["search", "search"], "semantic": "transportation"}
+{"code": "0b282cacd7d961be3e7c1da7914f7e43", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "0662b672008aa6fef683594fe9e3d901", "difficulty": 0, "gui": ["click", "dropdown", "special", "scroll"], "semantic": "shopping"}
+{"code": "d1d53aecdf9a9b251c4d50fd0b1be1f2", "difficulty": 0, "gui": ["search", "click", "text", "text"], "semantic": "housing"}
+{"code": "f313b0c222977cb0fe45d973790c182d", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "20b5eb766ce08695c2e77b180757a27b", "difficulty": 0, "gui": ["text", "text", "date"], "semantic": "transportation"}
+{"code": "61ac2b587639365658a886c12d176178", "difficulty": 0, "gui": ["dropdown", "dropdown", "dropdown"], "semantic": "calculator"}
+{"code": "d85eed59a601901af6901e839ef8147f", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "05ef3082453b192d61997a9096e09a97", "difficulty": 0, "gui": ["text", "date", "date", "special"], "semantic": "housing"}
+{"code": "8c7dab24df697166674920db24052f38", "difficulty": 0, "gui": ["text", "search"], "semantic": "other"}
+{"code": "de47f0b8384a86be2604f51999d64166", "difficulty": 0, "gui": ["text", "date", "date", "special", "special"], "semantic": "housing"}
+{"code": "dc832790ec0e25fade2b70379e4c480a", "difficulty": 0, "gui": ["click", "dropdown", "search"], "semantic": "entertainment"}
+{"code": "cce16cd9b5757e2534b266369e152c15", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "5290a9a2b9f4a584b25f8d18ee7fcc31", "difficulty": 0, "gui": ["search", "search"], "semantic": "dining"}
+{"code": "ba48c5fdcabeb548591c6b8e654ace1e", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "9a201bf3f588b3addf2bc3f804c0df38", "difficulty": 0, "gui": ["text", "search"], "semantic": "other"}
+{"code": "fc8ed63b2805e8614f982b12f3df02bf", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "b12bb7d43865dcb0f4441186e2e19dc4", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "b7c15001e74409507cd52284747ecb18", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "f7474ed5363bdff84cd53208e4c7dd02", "difficulty": 0, "gui": ["dropdown", "scroll"], "semantic": "other"}
+{"code": "90791b69558ecdf8960ac98a150820f3", "difficulty": 0, "gui": ["search", "search"], "semantic": "entertainment"}
+{"code": "b6141fab119eef5e5379ef6ecbc1c9b9", "difficulty": 0, "gui": ["search", "special", "click"], "semantic": "housing"}
+{"code": "03f82c37ba99fb29693c72df731868fd", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "00623a8426fa3e770c2ae981c78b05b0", "difficulty": 0, "gui": ["search", "search"], "semantic": "transportation"}
+{"code": "dccbb6f2249ad06ff6fe9b46f3bec2e4", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "0782c9b2edf99299d6b04eeff5a07f0a", "difficulty": 0, "gui": ["text", "text"], "semantic": "calculator"}
+{"code": "deec3f1a111fca1ab2cabb9535c33016", "difficulty": 0, "gui": ["text", "date", "date", "special", "special"], "semantic": "housing"}
+{"code": "3acc725b92057263ad867e389eba0a11", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "0dd7946d2369affcbd23448a2f47c978", "difficulty": 0, "gui": ["text", "special", "special"], "semantic": "housing"}
+{"code": "6d988a45c66511f78cf68af28e0be82e", "difficulty": 0, "gui": ["search", "click"], "semantic": "shopping"}
+{"code": "81939676f975f88664fba04f1bb1dfe7", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "c291f9e94179843bfe653181e3e4863b", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "94457fb2e7b0ff50b14083e1d801de85", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "808cbd27bbfda533f021bad0e1b9d6fa", "difficulty": 0, "gui": ["search", "click"], "semantic": "dining"}
+{"code": "f5a877cc996d2390d5613a7b917f636d", "difficulty": 0, "gui": ["search", "text"], "semantic": "shopping"}
+{"code": "b44bbed569e11e13540b0aae7f6b4df1", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "c5a3eef40ae278ab752a246ac5db7135", "difficulty": 0, "gui": ["text", "search"], "semantic": "shopping"}
+{"code": "7a8758db8742988d9ed9ae33a5c35aab", "difficulty": 0, "gui": ["text", "text", "date", "date"], "semantic": "transportation"}
+{"code": "f8aa649e05d0795109d2065a7943b73d", "difficulty": 0, "gui": ["text", "text", "text"], "semantic": "calculator"}
+{"code": "bada4bfa2d98b7df1466e07c827e4ad7", "difficulty": 0, "gui": ["text", "search"], "semantic": "dining"}
+{"code": "6a373650ca61e23b8ead1d2ed123fa8b", "difficulty": 0, "gui": ["text", "date", "search"], "semantic": "housing"}
+{"code": "e1d4132f1643aee2852a381d2aa8f1e1", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "02f9328489547a55cb06b873e8f54a76", "difficulty": 0, "gui": ["text", "text"], "semantic": "calculator"}
+{"code": "5b267bd311bb9f1c75e1daba91154e91", "difficulty": 0, "gui": ["dropdown", "text", "dropdown"], "semantic": "other"}
+{"code": "12d8b316f7e241580a69b0f599af6ba8", "difficulty": 0, "gui": ["date", "date"], "semantic": "transportation"}
+{"code": "cd994ea519299f35f30c9f0c95a4df38", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "7ad790c6b5ef45db34bd2977773ab3ae", "difficulty": 0, "gui": ["search", "search"], "semantic": "transportation"}
+{"code": "041a73dac284e0dbeaa3fca07ed0e1a5", "difficulty": 0, "gui": ["search", "click"], "semantic": "housing"}
+{"code": "bef869538af74b53d17091cce3a6a6be", "difficulty": 0, "gui": ["search", "search"], "semantic": "transportation"}
+{"code": "9f39f1a65296631072469a9c5db572dd", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "4563b0ab5252ca58bdf200a6d90d7395", "difficulty": 0, "gui": ["scroll"], "semantic": "other"}
+{"code": "83ba1bc1a197653f6b7bc9a4da054ec5", "difficulty": 0, "gui": ["search", "click"], "semantic": "shopping"}
+{"code": "5079d3a2b7b18c5a44f972536f0526f9", "difficulty": 0, "gui": ["click", "dropdown"], "semantic": "dining"}
+{"code": "bef4eef4f0bb56aefde8ade92784929b", "difficulty": 0, "gui": ["text", "text"], "semantic": "calculator"}
+{"code": "87a7e3d3c8a14fc11c7bc7eade00b861", "difficulty": 0, "gui": ["search"], "semantic": "dining"}
+{"code": "46bbd7ef677f8754dee5199c27b8db30", "difficulty": 0, "gui": ["click", "dropdown", "search"], "semantic": "entertainment"}
+{"code": "cad9165682a21262f0d615f599c6b0d3", "difficulty": 0, "gui": ["search"], "semantic": "shopping"}
+{"code": "345c3933a68a8fb04c8567e5051fbd74", "difficulty": 0, "gui": ["scroll"], "semantic": "housing"}
+{"code": "4502a7a6ffb941c4fecbca615d6b79cb", "difficulty": 0, "gui": ["text", "date", "date", "dropdown", "dropdown"], "semantic": "housing"}
+{"code": "523b54bd0f295b67faecaf1ba88c7263", "difficulty": 0, "gui": ["text", "text"], "semantic": "other"}
+{"code": "321f5783ddc9d173cf727046f0fffb6c", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "b429437753672f0999ff7a77a8e82e3a", "difficulty": 2, "gui": ["-"], "semantic": "-"}
+{"code": "9d9094ea4e376f9179bac74d71eb9018", "difficulty": 0, "gui": ["search", "click", "dropdown", "click"], "semantic": "shopping"}
+{"code": "fec21de749b27360ffbe8b41272e58ee", "difficulty": 0, "gui": ["text", "text"], "semantic": "other"}
+{"code": "cca3350311b9e224cd3c2c07c7f1382d", "difficulty": 1, "gui": ["-"], "semantic": "-"}
+{"code": "9a9f00db8fb74a399bdf292e9a13ebdb", "difficulty": 0, "gui": ["text", "text", "text"], "semantic": "calculator"}
