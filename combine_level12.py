@@ -16,15 +16,14 @@ combinedDB = {}
 for l2 in open(level2_json):
     l2 = json.loads(l2)
     code = l2['code1']
-    if code in combinedDB:
-        combinedDB[code]['data'].extend(l2['data'])
-    else:
+    if code not in combinedDB:
         entry = {}
         for tag in ['code', 'url', 'question', 'data']:
             entry[tag] = level1DB[code][tag]
         for tag in ['gui', 'difficulty', 'semantic']:
             entry[tag] = annotation[code][tag]
         combinedDB[code] = entry
+    combinedDB[code]['data'].extend(l2['data'])
 
 with open(output_json, 'w') as f:
     for code, entry in combinedDB.items():
